@@ -5,7 +5,15 @@ module.exports = {
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
   theme: {
-    extend: {},
+    extend: {
+
+      boxShadow:{
+        'button': '0px 0px 58px 7px rgba(5, 150, 105, 0.4)',
+      }
+    },
+    backgroundImage: {
+      'hero-image': "url('/img/hero-bg.png')"
+     },
   },
   plugins: [],
 }
