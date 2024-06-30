@@ -79,7 +79,7 @@ export const HeroSection = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <StaticImage className='w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover'
-                        src="/img/monkey.jpg"
+                        src="../images/monkey.jpg"
                         alt="Profile Picture"
                         width={420}
                         height={404}
