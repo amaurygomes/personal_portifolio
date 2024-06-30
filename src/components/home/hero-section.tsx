@@ -5,6 +5,7 @@ import { Button } from '../button';
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { GrDocumentDownload } from "react-icons/gr";
 import { motion } from 'framer-motion';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export const HeroSection = () => {
 
@@ -77,11 +78,12 @@ export const HeroSection = () => {
                     exit={{ opacity: 0, y: 200, scale: 0.5 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <img className='w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover'
+                    <StaticImage className='w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover'
                         src="/img/monkey.jpg"
                         alt="Profile Picture"
                         width={420}
                         height={404}
+                        loading='lazy'
                     />
                 </motion.div>
 

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 
 export const Header = () => {
@@ -12,7 +13,7 @@ export const Header = () => {
         >
             <div className="container flex itens-center justify-between">
                 <Link to='/'>
-                    <img src="/icons/icon-48x48.png" alt="Logo" width={58} height={49}/>
+                    <StaticImage src="/icons/icon-48x48.png" alt="Logo" width={58} height={49}/>
                 </Link>
 
                 <nav className="flex itens-center sm:gap-10 gap-2">
