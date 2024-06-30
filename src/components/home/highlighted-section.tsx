@@ -17,7 +17,9 @@ export const HighLightedProjects = () => {
 
             <div>
 
-                <SectionTitle title="Projetos em Destaque" section="destaques" />
+                <SectionTitle title="Projetos em Destaque" section="destaques" className=""/>
+                <HorizontalDivider className="mb-16" />
+                <ProjectCard />
                 <HorizontalDivider className="mb-16" />
                 <ProjectCard />
                 <HorizontalDivider className="mb-16" />

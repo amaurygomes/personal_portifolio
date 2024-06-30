@@ -4,6 +4,7 @@ import { RootLayout } from '../components/layout'
 import { HeroSection } from "../components/home/hero-section"
 import { HighLightedProjects } from "../components/home/highlighted-section"
 import { KnowTechs } from "../components/home/know-techs-section"
+import WorkExperience from "../components/home/work-experience-section"
 
 
 
@@ -16,6 +17,7 @@ const IndexPage: React.FC<PageProps> = ( ) => {
       <HeroSection/>
       <KnowTechs/>
       <HighLightedProjects/>
+      <WorkExperience/>
     </RootLayout>
   )
 }

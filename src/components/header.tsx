@@ -1,10 +1,15 @@
+import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import React from 'react';
 
 
 export const Header = () => {
     return (
-        <header className='absolute top-0 w-full z-10 h-24 flex items-center justify-center pb-4'>
+        <motion.header className=" absolute top-0 w-full z-10 h-24 flex items-center justify-center pb-4"
+         initial={{top:-100}}
+         animate={{top:0}}
+         transition={{duration:0.5}}
+        >
             <div className="container flex itens-center justify-between">
                 <Link to='/'>
                     <img src="/icons/icon-48x48.png" alt="Logo" width={58} height={49}/>
@@ -27,6 +32,6 @@ export const Header = () => {
             </div>
 
 
-        </header>
+        </motion.header>
     );
 };
