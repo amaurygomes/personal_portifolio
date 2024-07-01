@@ -10,7 +10,36 @@ import { graphql } from "gatsby"
 
 
 
-const IndexPage: React.FC<PageProps> = ({ data }) => {
+interface IndexPageProps extends PageProps {
+  data: {
+    amaurygomesAPI: {
+      pageInfo: {
+        name: string;
+        profilePicture: string;
+        introduction: string;
+        cv: string;
+        socials: {
+          icon: string;
+          url: string;
+        }[];
+        technologies: {
+          name: string;
+          startDate: string;
+          icon: string;
+        }[];
+      };
+      knowTechnologies: {
+        techs: {
+          name: string;
+          startDate: string;
+          icon: string;
+        }[];
+      };
+    };
+  };
+}
+
+const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
   return (
     <RootLayout>
