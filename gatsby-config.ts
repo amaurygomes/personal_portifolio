@@ -38,9 +38,9 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-graphql',
       options: {
-        typeName: 'graphqlAPI',
-        fieldName: 'graphqlAPI',
-        url: 'http://api.amaurygomes.com.br/graphql',
+        typeName: 'amaurygomesAPI',
+        fieldName: 'amaurygomesAPI',
+        url: 'https://api.amaurygomes.com.br/graphql',
       },
     },
   ]
