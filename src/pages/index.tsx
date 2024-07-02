@@ -6,45 +6,15 @@ import { HighLightedProjects } from "../components/home/highlighted-section"
 import { KnowTechs } from "../components/home/know-techs-section"
 import WorkExperience from "../components/home/work-experience-section"
 import { graphql } from "gatsby"
+import { IndexPageProps } from "../interface/graphql.d"
 
-
-
-
-interface IndexPageProps extends PageProps {
-  data: {
-    amaurygomesAPI: {
-      pageInfo: {
-        name: string;
-        profilePicture: string;
-        introduction: string;
-        cv: string;
-        socials: {
-          icon: string;
-          url: string;
-        }[];
-        technologies: {
-          name: string;
-          startDate: string;
-          icon: string;
-        }[];
-      };
-      knowTechnologies: {
-        techs: {
-          name: string;
-          startDate: string;
-          icon: string;
-        }[];
-      };
-    };
-  };
-}
 
 const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
   return (
     <RootLayout>
-      <HeroSection data={data.amaurygomesAPI.pageInfo} />
-      <KnowTechs data={data.amaurygomesAPI.knowTechnologies} />
+      <HeroSection pageInfo={data.amaurygomesAPI.pageInfo} />
+      <KnowTechs knowTechnologies={data.amaurygomesAPI.knowTechnologies} />
       <HighLightedProjects />
       <WorkExperience />
     </RootLayout>

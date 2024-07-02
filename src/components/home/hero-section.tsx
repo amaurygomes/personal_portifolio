@@ -7,22 +7,10 @@ import { GrDocumentDownload } from "react-icons/gr";
 import { m, motion } from 'framer-motion';
 import { StaticImage } from 'gatsby-plugin-image';
 import { RenderHtml } from '../../utils/render-html';
+import { HeroSectionProps } from '../../interface/graphql.d';
 
-interface HeroSectionProps {
-    data: {
-        name: string
-        introduction: string
-        profilePicture: string
-        cv: string
-        technologies: { name: string }[]
-        socials: {
-            icon: string
-            url: string
-        }[]
-        
-    }
-}
-export const HeroSection: React.FC<HeroSectionProps> = ( { data } ) => {
+
+export const HeroSection: React.FC<HeroSectionProps> = ( { pageInfo } ) => {
 
     return (
 
@@ -37,13 +25,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ( { data } ) => {
                     transition={{ duration: 0.5 }}
                 >
                     <p className="text-emerald-400 font-mono ">Olá, meu nome é</p>
-                    <h2 className="font-medium text-4xl mt-2">{data.name}</h2>
-                    <RenderHtml html={data.introduction} className='text-gray-400 my-6 text-sm sm:text-base'/>
+                    <h2 className="font-medium text-4xl mt-2">{pageInfo.name}</h2>
+                    <RenderHtml html={pageInfo.introduction} className='text-gray-400 my-6 text-sm sm:text-base'/>
                        
                    
                     <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
 
-                        {data.technologies.map((tech, i) => (
+                        {pageInfo.technologies.map((tech, i) => (
                             <Badge
                                 tech={tech.name}
                                 key={tech.name}
@@ -58,7 +46,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ( { data } ) => {
                     </div>
 
                     <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
-                        <a href={`https://api.amaurygomes.com.br/media/${data.cv}`}>
+                        <a href={`https://api.amaurygomes.com.br/media/${pageInfo.cv}`}>
                             <Button className='shadow-button w-max'>Baixar CV <GrDocumentDownload /></Button>
                         </a>
                         <div className="text-gray-600 text-2xl flex items-center h-20 gap-3">
@@ -86,7 +74,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ( { data } ) => {
                     transition={{ duration: 0.5 }}
                 >
                     <img className='w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover'
-                        src={`https://api.amaurygomes.com.br/media/${data.profilePicture}`}
+                        src={`https://api.amaurygomes.com.br/media/${pageInfo.profilePicture}`}
                         alt="Profile Picture"
                         width={420}
                         height={404}
