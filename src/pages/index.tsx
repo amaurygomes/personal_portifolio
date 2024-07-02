@@ -9,13 +9,14 @@ import { graphql } from "gatsby"
 import { IndexPageProps } from "../interface/graphql.d"
 
 
+
 const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
   return (
     <RootLayout>
       <HeroSection pageInfo={data.amaurygomesAPI.pageInfo} />
       <KnowTechs knowTechnologies={data.amaurygomesAPI.knowTechnologies} />
-      <HighLightedProjects />
+      <HighLightedProjects highlightProjects={data.amaurygomesAPI.highlightProjects}/>
       <WorkExperience />
     </RootLayout>
   )
@@ -26,7 +27,6 @@ export default IndexPage
 export const Head: HeadFC = () => <title>Amauy Gomes</title>
 
 export const query = graphql`
-
 query MyQuery {
   amaurygomesAPI {
     pageInfo(id: 1) {
@@ -47,6 +47,17 @@ query MyQuery {
         name
         startDate
         icon
+      }
+    }
+    highlightProjects(id: 1) {
+      project {
+        title
+        shortDescription
+        thumbnail
+        slug
+        technologies {
+          name
+        }
       }
     }
   }

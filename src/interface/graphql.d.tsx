@@ -30,7 +30,7 @@ export interface ProjectProps {
     description: string
     githubUrl: string
     liveProjectUrl: string
-    tumbnail: string
+    thumbnail: string
     pagethumbnail: string
     technologies: TechinologiesProps[]
 }
@@ -38,10 +38,6 @@ export interface ProjectProps {
 export interface SectionProps {
     name: string
     image: string
-    projects: ProjectProps[]
-}
-
-export interface HighlightProjectsProps {
     projects: ProjectProps[]
 }
 
@@ -62,7 +58,7 @@ export interface IndexPageProps {
         amaurygomesAPI: {
             pageInfo: PageInfoProps
             knowTechnologies: KnowTechsProps
-            highlightProjects: HighlightProjectsProps
+            highlightProjects: ProjectProps[]
             workExperience: WorkExperienceProps[]
         }
     }
@@ -79,6 +75,16 @@ export interface knowSectionProps {
     }
 }
 
+export interface HighSectionProps {
+    highlightProjects: {
+        project: ProjectProps[]
+    }
+}
+
 export interface KnowTechProps {
     tech: TechinologiesProps
+}
+
+export interface ProjectCardProps {
+    project: ProjectProps
 }
