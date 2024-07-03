@@ -12,7 +12,7 @@ module.exports = {
       }
     },
     backgroundImage: {
-      'hero-image': "url('/img/hero-bg.png')"
+      'hero-image': "url('/img/hero-bg-min.png')"
      },
   },
   plugins: [],

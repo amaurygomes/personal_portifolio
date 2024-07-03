@@ -4,21 +4,12 @@ import { ptBR } from 'date-fns/locale';
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
 import { Badge } from "./badge";
+import { WorkExperienceItemProps } from "../interface/graphql.d";
+import { RenderHtml } from "../utils/render-html";
 
-interface WorkExperienceProps {
-    work: {
-        companyName: string;
-        companyUrl: string;
-        companyLogo: string; // Aqui está correto, companyLogo em camelCase
-        description?: string;
-        endDate: string;
-        role: string;
-        startDate: string;
-        technologies: string[];
-    };
-}
 
-export const WorkExperienceItem: React.FC<WorkExperienceProps> = ({ work }) => {
+
+export const WorkExperienceItem = ({ work }: WorkExperienceItemProps) => {
     const startDate = new Date(work.startDate);
     const formattedStartDate = format(startDate, 'MMM yyyy', { locale: ptBR });
     const formattedEndDate = work.endDate
@@ -74,7 +65,7 @@ export const WorkExperienceItem: React.FC<WorkExperienceProps> = ({ work }) => {
                         {formattedStartDate} • {formattedEndDate} • ({formattedDuration})
                     </span>
 
-                    <p className="text-gray-400">{work.description}</p>
+                    <RenderHtml html={work.description} className="text-gray-400"/>
                 </div>
 
                 <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">Competências</p>
@@ -82,7 +73,7 @@ export const WorkExperienceItem: React.FC<WorkExperienceProps> = ({ work }) => {
                     {work.technologies.map((tech, i) => (
                         <Badge
                             key={i}
-                            tech={tech}
+                            tech={tech.name}
                             initial={{ opacity: 0, scale: 0 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0 }}
