@@ -5,7 +5,7 @@ import { Button } from '../button';
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { GrDocumentDownload } from "react-icons/gr";
 import { m, motion } from 'framer-motion';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage, getImage } from 'gatsby-plugin-image';
 import { RenderHtml } from '../../utils/render-html';
 import { HeroSectionProps } from '../../interface/graphql.d';
 
@@ -47,7 +47,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ( { pageInfo } ) => {
 
                     <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
                         <a href={`https://api.amaurygomes.com.br/media/${pageInfo.cv}`}>
-                            <Button className='shadow-button w-max'>Baixar CV <GrDocumentDownload /></Button>
+                            <Button className='shadow-button w-max'>Vizualizar  CV <GrDocumentDownload /></Button>
                         </a>
                         <div className="text-gray-600 text-2xl flex items-center h-20 gap-3">
                             <a href='https://fb.com/amaurygomesibanez' target='_blank'>
@@ -59,7 +59,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ( { pageInfo } ) => {
                             <a href='https://github.com/amaurygomes' target='_blank'>
                                 <FaGithub />
                             </a>
-                            <a href='https://linkedin.com/amaurygomes' target='_blank'>
+                            <a href='https://linkedin.com/in/amaurygomes' target='_blank'>
                                 <FaLinkedin />
                             </a>
                         </div>

@@ -56,18 +56,18 @@ export interface WorkExperienceProps {
 export interface IndexPageProps {
     data: {
         amaurygomesAPI: {
-            pageInfo: PageInfoProps
-            knowTechnologies: KnowTechsProps
-            highlightProjects: ProjectProps[]
-            workExperience: WorkExperienceProps[]
-        }
+            pageInfo: PageInfoProps;
+            knowTechnologies: KnowTechsProps;
+            highlightProjects: ProjectProps[];
+            allWorkExperience: WorkExperienceProps[];
+        };
     }
 }
 
 
 export interface HeroSectionProps {
-        pageInfo: PageInfoProps
-    }
+    pageInfo: PageInfoProps
+}
 
 export interface knowSectionProps {
     knowTechnologies: {
@@ -76,13 +76,25 @@ export interface knowSectionProps {
 }
 
 export interface HighSectionProps {
-    highlightProjects: {
-        project: ProjectProps[]
-    }
+    highlightProjects:  ProjectProps[]
+    
 }
+
+export interface WorkSectionProps {
+    allWorkExperience:  WorkExperienceProps[]
+    
+}
+
+
 
 export interface KnowTechProps {
     tech: TechinologiesProps
+}
+
+
+
+export interface WorkExperienceItemProps {
+    work: WorkExperienceProps
 }
 
 export interface ProjectCardProps {

@@ -17,7 +17,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       <HeroSection pageInfo={data.amaurygomesAPI.pageInfo} />
       <KnowTechs knowTechnologies={data.amaurygomesAPI.knowTechnologies} />
       <HighLightedProjects highlightProjects={data.amaurygomesAPI.highlightProjects}/>
-      <WorkExperience />
+      <WorkExperience allWorkExperience={data.amaurygomesAPI.allWorkExperience} />
     </RootLayout>
   )
 }
@@ -58,6 +58,18 @@ query MyQuery {
         technologies {
           name
         }
+      }
+    }
+    allWorkExperience {
+      companyName
+      companyUrl
+      companylogo
+      description
+      role
+      startDate
+      endDate
+      technologies {
+        name
       }
     }
   }
