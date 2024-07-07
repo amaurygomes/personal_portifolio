@@ -10,6 +10,7 @@ import { IndexPageProps } from "../interface/graphql.d"
 
 
 
+
 const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
   return (
