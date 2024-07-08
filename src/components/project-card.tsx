@@ -3,9 +3,8 @@ import { Badge } from "./badge";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
-import { StaticImage } from 'gatsby-plugin-image';
 import { ProjectCardProps } from "../interface/graphql.d";
-import { HorizontalDivider } from "./divider-h";
+
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
