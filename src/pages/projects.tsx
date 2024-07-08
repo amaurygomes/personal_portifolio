@@ -25,7 +25,7 @@ const ProjectPage: React.FC<PageProps> = () => {
             transition={{duration:0.6}}
             >
                 <p className="text-gray-400 text-center  max-w-[640px] my-6  text-sm sm:text-base">Abaixo você poderá ver alguns dos trabalhos que eu desenvolvi. Navegue à vontade e explore os projetos para ver como foram criados, as tecnologias utilizadas e as funcionalidades implementadas.</p>
-                <Link to="/">
+                <Link to="/" className="flex items-center gap-2 text-gray-300 text-sm hover:text-emerald-500 transition-colors">
                     <HiArrowNarrowLeft />
                     Voltar para Home
                 </Link>
