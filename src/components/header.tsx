@@ -14,8 +14,13 @@ export const Header = () => {
             transition={{ duration: 0.5 }}
         >
             <div className="container flex itens-center justify-between">
-                <Link to='/'>
+                {/* <Link to='/'>
                     <img src="/icons/icon-48x48.png" alt="Logo" width={58} height={49} />
+                </Link>
+                */}
+
+                <Link to='/'>
+                    <h1 className='text-4xl font-semibold'>Ibanez<span className='text-emerald-400'>.</span> </h1>
                 </Link>
 
                 <nav className="flex itens-center sm:gap-10 gap-2">
