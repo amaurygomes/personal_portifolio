@@ -12,7 +12,7 @@ export const ContactForm = () => {
  
 
   return (
-    <section className="py-16 px-6 md:py-32 flex items-center justify-center bg-gray-900" id="contact">
+    <section className="py-40 px-6 md:py-32 flex items-center justify-center bg-gray-900" id="contact">
         <div className="w-full  max-w-[420px] mx-auto">
           <SectionTitle section="contato" title="Vamos trabalhar juntos? Entre em contato" className="items-center text-center" />
           <motion.form className="mt-12 w-full flex flex-col gap-4">
