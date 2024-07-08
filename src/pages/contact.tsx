@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, type HeadFC, type PageProps } from "gatsby"
 import { RootLayout } from "../components/layout"
+import { ContactForm } from "../components/contact"
 
 
 
@@ -9,7 +10,7 @@ const ContactPage: React.FC<PageProps> = () => {
 
     return (
         <RootLayout>
-            <h1>Contatos</h1>
+            <ContactForm/>
         </RootLayout>
     )
 }

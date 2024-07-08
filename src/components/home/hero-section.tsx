@@ -8,6 +8,7 @@ import { m, motion } from 'framer-motion';
 import { StaticImage, getImage } from 'gatsby-plugin-image';
 import { RenderHtml } from '../../utils/render-html';
 import { HeroSectionProps } from '../../interface/graphql.d';
+import { ProfilePicture } from '../profile-picture';
 
 
 export const HeroSection: React.FC<HeroSectionProps> = ( { pageInfo } ) => {
@@ -16,9 +17,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ( { pageInfo } ) => {
 
 
         <section className="w-full lg:h-[700px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-center pb-10 sm:pb-32 py-40 lg:pb-[110px]">
-            <div className="container flex itens-start justify-between flex-col-reverse sm:flex-row">
+            <div className="container flex  justify-between flex-col-reverse sm:flex-row items-center gap-8">
 
-                <motion.div className="w-full lg:max-w-[530px]  "
+                <motion.div className="w-full lg:max-w-[530px]"
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
@@ -47,7 +48,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ( { pageInfo } ) => {
 
                     <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
                         <a href={`https://api.amaurygomes.com.br/media/${pageInfo.cv}`}>
-                            <Button className='shadow-button w-max'>Vizualizar  CV <GrDocumentDownload /></Button>
+                            <Button className='shadow-button w-max'>Baixar CV <GrDocumentDownload /></Button>
                         </a>
                         <div className="text-gray-600 text-2xl flex items-center h-20 gap-3">
                             <a href='https://fb.com/amaurygomesibanez' target='_blank'>
@@ -67,20 +68,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ( { pageInfo } ) => {
 
                 </motion.div>
 
-                <motion.div className="rounded-sm origin-center"
-                    initial={{ opacity: 0, y: 200, scale: 0.5 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 200, scale: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <img className='w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover'
-                        src={`https://api.amaurygomes.com.br/media/${pageInfo.profilePicture}`}
-                        alt="Profile Picture"
-                        width={420}
-                        height={404}
-                        loading='lazy'
-                    />
-                </motion.div>
+               <ProfilePicture/>
 
             </div>
         </section>

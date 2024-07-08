@@ -10,12 +10,13 @@ interface LayoutProps {
 
 export const RootLayout: React.FC<LayoutProps> = ({ children }) => {
     return (
-        <main >
+        <div className="flex flex-col min-h-screen">
             <Header />
-            {children}
-            <ContactForm/>
-            <Footer/>
-            <BackToTop/>
-        </main>
+            <main className="flex-grow">
+                {children}
+            </main>
+            <Footer />
+            <BackToTop />
+        </div>
     );
 };

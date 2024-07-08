@@ -27,7 +27,7 @@ export const Header = () => {
                         <span className="text-emerald-400">#</span>
                         Projetos
                     </Link>
-                    <Link to='#contact'
+                    <Link to='/contact'
                         className='text-gray-400 flex items-center gap-2 font-medium font-mono text-sm sm:text-lg hover:text-emerald-400'
                         activeClassName="text-gray-50"
                     >
