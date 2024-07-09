@@ -25,7 +25,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Amauy Gomes</title>
+export const Head: HeadFC = () => <title>Portifólio</title>
 
 export const query = graphql`
 query MyQuery {
