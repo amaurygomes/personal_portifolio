@@ -22,7 +22,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({ title, section, clas
             <motion.span className="font-mono text-sm text-emerald-400"
                 {...animProps}
                 transition={{ duration: 0.5 }}>
-                {`../amaurygomes/${section}`}
+                {`../ibanez/${section}`}
             </motion.span>
             <motion.h3 className="text-3xl font-medium"
                 {...animProps}

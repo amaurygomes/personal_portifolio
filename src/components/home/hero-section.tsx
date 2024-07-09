@@ -25,8 +25,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ( { pageInfo } ) => {
                     exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <p className="text-emerald-400 font-mono ">Olá, meu nome é</p>
-                    <h2 className="font-medium text-4xl mt-2">{pageInfo.name}</h2>
+                    <p className=" font-mono ">Olá, meu nome é</p>
+                    <h2 className="text-emerald-400 font-bold text-4xl mt-2">{pageInfo.name}</h2>
                     <RenderHtml html={pageInfo.introduction} className='text-gray-400 my-6 text-sm sm:text-base'/>
                        
                    
