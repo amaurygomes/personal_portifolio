@@ -15,9 +15,9 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
   return (
     <RootLayout>
-      <HeroSection pageInfo={data.amaurygomesAPI.pageInfo} />
-      <KnowTechs knowTechnologies={data.amaurygomesAPI.knowTechnologies} />
+      <HeroSection pageInfo={data.amaurygomesAPI.pageInfo} />      
       <HighLightedProjects highlightProjects={data.amaurygomesAPI.highlightProjects}/>
+      <KnowTechs knowTechnologies={data.amaurygomesAPI.knowTechnologies} />
       <WorkExperience allWorkExperience={data.amaurygomesAPI.allWorkExperience} />
     </RootLayout>
   )

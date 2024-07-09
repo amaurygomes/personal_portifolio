@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { CiMenuKebab } from "react-icons/ci";
-import { IoIosCloseCircle } from "react-icons/io";
+import { FaRegWindowClose } from "react-icons/fa";
+import { RiMenu3Fill } from "react-icons/ri";
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -53,9 +53,9 @@ export const Header = () => {
 
                 <button onClick={toggleMenu} className="md:hidden z-20 relative">
                     {isOpen ? (
-                        <IoIosCloseCircle className='text-3xl text-emerald-400' />
+                        <FaRegWindowClose className='text-3xl text-emerald-400 hover:text-gray-300' />
                     ) : (
-                        <CiMenuKebab className='text-3xl text-emerald-900' />
+                        <RiMenu3Fill  className='text-3xl text-emerald-400 hover:text-gray-300' />
                     )}
                 </button>
             </div>
