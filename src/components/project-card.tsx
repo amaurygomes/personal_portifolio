@@ -59,7 +59,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     />)}
 
                 </div>
-                <Link to="/project/id" className="flex items-center gap-2 text-gray-300 text-sm hover:text-emerald-500 transition-colors">
+                <Link to={`/project/${project.slug}`} className="flex items-center gap-2 text-gray-300 text-sm hover:text-emerald-500 transition-colors">
                     Ver Projeto
                     <HiArrowNarrowRight />
                 </Link>

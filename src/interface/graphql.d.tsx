@@ -100,3 +100,15 @@ export interface WorkExperienceItemProps {
 export interface ProjectCardProps {
     project: ProjectProps
 }
+
+export interface ProjectsListProps {
+    data: {
+        amaurygomesAPI: {
+            allProjects: ProjectProps[]
+        }
+    }
+  }
+
+export interface ProjectListProps {
+    allProjects: ProjectProps[]
+}
