@@ -17,7 +17,7 @@
     @apply mx-auto w-full max-w-[1200px] px-6;
   }
 
-  /* Estilos para scrollbars */
+ 
 *::-webkit-scrollbar {
     width: 8px;
   }
